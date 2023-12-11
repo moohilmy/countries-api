@@ -1,0 +1,103 @@
+/*
+
+- Dark-Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very-Dark-Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very-Dark-Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark-Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very-Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap');
+:root{
+  --Dark-Blue : hsl(209, 23%, 22%);
+  --Very-Dark-Blue-background : hsl(207, 26%, 17%);
+  --Very-Dark-Blue : hsl(200, 15%, 8%);
+  --Dark-Gray :  hsl(0, 0%, 52%);
+  --Very-Light-Gray : hsl(0, 0%, 98%);
+  --White : hsl(0, 0%, 100%);
+  --Homepage-Items: 14px;
+  --Detail-Page: 16px ;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+i{
+  font-style: normal;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+span{
+  display: inline-block;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-right: 5px;
+}
+.light-theme-background{
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Blue);
+}
+
+.light-element{
+  background-color: var(--White);
+  color: var(--Very-Dark-Blue);
+  box-shadow: 0px 0px 4px 0px rgba(133,133,133,0.45);
+}
+
+.light-theme-btn{
+  color: var(--Very-Dark-Blue);
+  background-color: var(--White);
+}
+
+.dark-theme-background{
+  background-color: var(--Very-Dark-Blue-background);
+  color: var(--White);
+}
+
+.dark-element{
+  background-color: var(--Dark-Blue);
+  color: var(--White)
+}
+
+.dark-theme-btn{
+  color: var(--White);
+  background-color: var(--Dark-Blue);
+}
+
+.countrol-page{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  align-items: center;
+}
+
+@media (max-width: 990px)  {
+  .countrol-page{
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+}
+
+@media (max-width: 600px){
+  .nav-bar{
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: flex-start;
+  }}

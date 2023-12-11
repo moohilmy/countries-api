@@ -1,0 +1,31 @@
+
+header{
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo{
+    font-size: 22px;
+    letter-spacing: 1px;
+    cursor: default;
+}
+
+.btn{
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+@media (max-width: 990px)  {
+    .logo{
+        font-size: 18px;
+    }
+}

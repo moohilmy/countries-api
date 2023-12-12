@@ -5,20 +5,22 @@ export function getCountriesbyRegion(region){
     }
 }
 
-export function searchCountryBySearchBar(value){
+export function setSearchBarValue(value){
     return async (dispatch)=>{
-        dispatch(countriesActions.searchCountry(value))
+        dispatch(countriesActions.setSearchBar(value))
+    }
+}
+export function searchCountryBySearchBar(){
+    return async (dispatch)=>{
+        dispatch(countriesActions.searchCountry())
     }
 }
 
-export function searchCountryBySearchBarInRegion(value){
+export function searchCountryBySearchBarInRegion(){
     return async (dispatch)=>{
-        dispatch(countriesActions.searchCountryInRegion(value))
+        dispatch(countriesActions.searchCountryInRegion())
     }
 }
-
-
-
 
 export function getCountrybyname(name){
     return async (dispatch) => {
@@ -36,9 +38,14 @@ export function getCountriesBorderName(){
             dispatch(countriesActions.clearBorderCountries())
     }
 }
-export function clearSearchbar(){
+export function clearSearchBarInRegion(){
     return async (dispatch) => {
-            dispatch(countriesActions.clearSearchBar())
+            dispatch(countriesActions.clearSearchBarInRegion())
+    }
+}
+export function clearSearchBarValue(){
+    return async (dispatch) => {
+            dispatch(countriesActions.clearSearchBarValue())
     }
 }
 

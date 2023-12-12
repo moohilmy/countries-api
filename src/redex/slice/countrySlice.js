@@ -6,6 +6,7 @@ const countriesSlice = createSlice(
     initialState:{
         countries: countries,
         countriesByRegion: [],
+        serchBarValue: "" ,
         countriesBySearchBar: countries,
         countriesByRegionInSearch: [],
         country: [],
@@ -20,12 +21,15 @@ const countriesSlice = createSlice(
             state.countriesByRegion = state.countries.filter(c => c.region == action.payload)
 
         },
+        setSearchBar(state,action){
+            state.serchBarValue = action.payload
+        },
         searchCountry(state,action){
-            state.countriesBySearchBar = state.countries.filter(c => c.name.toLowerCase().includes(action.payload))
+            state.countriesBySearchBar = state.countries.filter(c => c.name.toLowerCase().includes(state.serchBarValue))
     },
     searchCountryInRegion(state,action){
-            state.countriesByRegionInSearch = state.countriesByRegion.filter(c => c.name.toLowerCase().includes(action.payload))
-            if(action.payload.length == 0){
+            state.countriesByRegionInSearch = state.countriesByRegion.filter(c => c.name.toLowerCase().includes(state.serchBarValue))
+            if(state.serchBarValue.length == 0){
                 state.countriesByRegionInSearch = []
             }
     },
@@ -48,8 +52,12 @@ const countriesSlice = createSlice(
     clearBorderCountries(state,action){
         state.borderCountries = null
     },
-    clearSearchBar(state,action){
+    clearSearchBarInRegion(state,action){
         state.countriesByRegionInSearch = []
+    },
+    clearSearchBarValue(state,action){
+        state.serchBarValue = ""
+        state.countriesBySearchBar = state.countries
     }
     }
 

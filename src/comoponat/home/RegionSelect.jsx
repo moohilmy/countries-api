@@ -1,7 +1,7 @@
 import { useState,useContext } from "react";
 import {themeConatext}  from "../../App.jsx";
 import { useDispatch } from "react-redux";
-import { clearSearchbar, getCountriesbyRegion} from "../../redex/apicall/countriesApi.js";
+import { clearSearchBarInRegion, getCountriesbyRegion,clearSearchBarValue} from "../../redex/apicall/countriesApi.js";
 
 
 const RegionSelect = () => {
@@ -18,7 +18,8 @@ const RegionSelect = () => {
         {Regions.map((region,index)=>(
             <li key={index + 1} value={region} onClick={()=> {setRegionSelector(region)
             dispatch(getCountriesbyRegion(region))
-            dispatch(clearSearchbar())
+            dispatch(clearSearchBarInRegion())
+            dispatch(clearSearchBarValue())
             region == "All" && setRegionSelector("Filter by Region")
             }}>
                 {region}

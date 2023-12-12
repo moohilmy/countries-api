@@ -36,6 +36,7 @@
     position: relative;
     padding: 10px 15px;
     width: 180px;
+    z-index: 2;
 }
 .select i{
     position: absolute;

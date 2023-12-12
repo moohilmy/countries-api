@@ -18,16 +18,11 @@ export function searchCountryBySearchBarInRegion(value){
 }
 
 
-export function clearsearchBar(){
-    return async (dispatch)=>{
-        dispatch(countriesActions.clearsearchCountryInRegion())
-    }
-}
+
 
 export function getCountrybyname(name){
     return async (dispatch) => {
         dispatch(countriesActions.setCountry(name))
-        
     }
 }
 export function getCountriesBorder(){
@@ -41,3 +36,9 @@ export function getCountriesBorderName(){
             dispatch(countriesActions.clearBorderCountries())
     }
 }
+export function clearSearchbar(){
+    return async (dispatch) => {
+            dispatch(countriesActions.clearSearchBar())
+    }
+}
+

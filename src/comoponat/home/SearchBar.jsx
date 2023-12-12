@@ -25,5 +25,5 @@ const searchHandler = (value)=>{
     </div> 
     );
 }
- 
+
 export default SearchBar;

@@ -10,7 +10,7 @@ const countriesSlice = createSlice(
         countriesByRegionInSearch: [],
         country: [],
         borderCountries: [],
-        borderCountriesName: []
+        borderCountriesName: [],
     },
     reducers:{
         setCountries(state,action){
@@ -47,6 +47,9 @@ const countriesSlice = createSlice(
     },
     clearBorderCountries(state,action){
         state.borderCountries = null
+    },
+    clearSearchBar(state,action){
+        state.countriesByRegionInSearch = []
     }
     }
 

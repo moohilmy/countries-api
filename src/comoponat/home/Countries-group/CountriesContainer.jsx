@@ -16,11 +16,14 @@ const CountriesCountainer = () => {
                     <CountryCard key={country.name} country={country}/>
                     ))
                 :
+                countriesByRegionInSearch.length == 0  && countriesBySearchBar.length < countriesByRegion.length?
+                <NotFound/>
+                :
                 countriesByRegion.length > 0 && countriesByRegionInSearch.length == 0 ?
                 countriesByRegion.map(country =>(
                     <CountryCard key={country.name} country={country}/>
-                ))
-                :
+                    ))
+                    :
                 countriesBySearchBar.map(country =>(
                     <CountryCard key={country.name} country={country}/>
                 ))

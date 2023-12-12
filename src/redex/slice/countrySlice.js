@@ -25,10 +25,10 @@ const countriesSlice = createSlice(
             state.serchBarValue = action.payload
         },
         searchCountry(state,action){
-            state.countriesBySearchBar = state.countries.filter(c => c.name.toLowerCase().includes(state.serchBarValue))
+            state.countriesBySearchBar = state.countries.filter(c => c.name.toLowerCase().includes(state.serchBarValue.toLowerCase()))
     },
     searchCountryInRegion(state,action){
-            state.countriesByRegionInSearch = state.countriesByRegion.filter(c => c.name.toLowerCase().includes(state.serchBarValue))
+            state.countriesByRegionInSearch = state.countriesByRegion.filter(c => c.name.toLowerCase().includes(state.serchBarValue.toLowerCase()))
             if(state.serchBarValue.length == 0){
                 state.countriesByRegionInSearch = []
             }

@@ -69,10 +69,17 @@
         font-size: 20px;
     }
     }
+
+@media (max-width: 768px)  {
+
+.countries-container{
+    grid-template-columns: repeat(auto-fill, minmax(250PX, 1fr));
+}
+    }
 @media (max-width: 480PX)  {
     
 .countries-container{
-    grid-template-columns: repeat(auto-fill, minmax(280PX, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200PX, 1fr));
     gap: 25px;
 }
 

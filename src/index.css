@@ -75,8 +75,8 @@ span{
 }
 
 .countrol-page{
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 
@@ -89,8 +89,8 @@ span{
 
 @media (max-width: 990px)  {
   .countrol-page{
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 50px;
+      padding-right: 50px;
   }
 }
 
@@ -101,3 +101,10 @@ span{
       width: 100%;
       align-items: flex-start;
   }}
+
+  @media (max-width: 480PX)  {
+    .countrol-page{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    }
